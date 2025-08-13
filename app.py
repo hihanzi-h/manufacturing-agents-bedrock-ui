@@ -11,16 +11,7 @@ import yaml
 from datetime import datetime
 
 load_dotenv()
-st.set_page_config(
-    page_title="Your App",
-    layout="wide"
-)
 
-# Add this at the top of your main script
-if 'first_run' not in st.session_state:
-    st.session_state.first_run = True
-    st.rerun()
-    
 # Configure logging using YAML
 if os.path.exists("logging.yaml"):
     with open("logging.yaml", "r") as file:
